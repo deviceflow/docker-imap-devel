@@ -13,5 +13,5 @@ services:
     - "993:993"
     environment:
     - MAILNAME=example.org
-    - MAIL_ADDRESS=address@example.org
-    - MAIL_PASS=pass
+    - MAIL_CATCH_ALL=catchall@example.org
+    - MAIL_ADDRESS_FILE=/mailboxes.txt

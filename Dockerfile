@@ -1,4 +1,4 @@
-FROM ubuntu:24.04
+FROM ubuntu:16.04
 
 ENV MAILNAME=localdomain.test \
     MAIL_FS_USER=docker \

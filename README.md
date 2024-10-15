@@ -16,6 +16,11 @@ Every email received via SMTP will be delivered locally to `debug@example.org`, 
 
 Using your favorite email client you can connect via IMAP protocol to see emails like original recipient would received them
 
+## Building
+
+Normally the dev-services code in the monorepo will handle running it, and the image is stored in ECR. If you do have to
+build it yourself, set the AWS_ACCOUNT_ID environment variable and run `just build-docker && just push-docker`.
+
 
 ## Run container with docker compose
 

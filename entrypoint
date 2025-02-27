@@ -107,7 +107,10 @@ fi
 /usr/sbin/postconf -e mailbox_transport=lmtp:unix:private/dovecot-lmtp
 /usr/sbin/postconf -e virtual_mailbox_domains=/etc/postfix/vhost
 /usr/sbin/postconf -e virtual_mailbox_maps=hash:/etc/postfix/vmailbox
-/usr/sbin/postconf compatibility_level=2
+/usr/sbin/postconf -e compatibility_level=2
+/usr/sbin/postconf -e 'debug_peer_list=*'
+/usr/sbin/postconf -e debug_peer_level=2
+/usr/sbin/postconf -e header_checks=regexp:/etc/postfix/header_checks
 
 # Create user account
 MAIL_ADDRESS_FILE=${MAIL_ADDRESS_FILE:-"/mailboxes.txt"}
